@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description"
           content="Given a single frame of a game, VALERANT spawns a virtual agent that explores the scene, rolling out a smooth, collision-free video and reconstructing the corresponding point-cloud game map at the same time.">
-    <meta name="keywords" content="game map generation, navigable map, world model, action-conditioned world model, procedural content generation, game level generation">
+    <meta name="keywords" content="world action model, WAM, action-conditioned world model, game map generation, 3D game map, navigable map, SLAM, training-free, embodied AI, procedural content generation">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VALERANT: An Automatic Navigable Game Map Generator via Action-Conditioned World Model Exploration</title>
 
@@ -171,8 +171,24 @@
       </div>
       <div class="content has-text-justified">
         <p>
-          <!-- TODO: paste your abstract here. -->
-          Your abstract goes here.
+          World Action Models (WAMs) couple predictive world modeling with action generation, allowing
+          anticipated future states to guide agent behavior. Although WAMs are rapidly advancing embodied
+          AI, general-purpose counterparts remain largely unexplored in games. Existing game-oriented
+          approaches often combine action-conditioned world models with external policies and reward
+          functions to realize WAM-like decision-making, yet they operate mainly in 2D visual observation
+          space and do not instantiate persistent 3D geometry. Extending this paradigm to 3D games
+          introduces a distinct challenge. In autonomous driving and robotics, the physical environment
+          exists independently of the model, providing a persistent 3D world in which selected actions can
+          be executed. Games have no such external substrate; the virtual world itself must be
+          instantiated. Most playable games require a persistent and navigable space, while 3D games
+          additionally require explicit geometry that supports movement and interaction. Action-conditioned
+          video rollouts provide visual observations but not this spatial representation. We present
+          <b><span style="color:#f03a17">VALERANT</span></b>, a <b>training-free</b> framework that transforms a pretrained action-conditioned
+          world model into a WAM for exploring and constructing 3D game maps. By coupling
+          <b><span style="color:#209cee">predictive visual rollouts</span></b> with <b><span style="color:#209cee">SLAM-based spatial reconstruction</span></b> and
+          <b><span style="color:#209cee">exploration-driven action selection</span></b>, <b><span style="color:#f03a17">VALERANT</span></b> progressively transforms a single
+          image into a persistent 3D game map. This framework extends WAM-based interaction beyond 2D
+          visual simulation and offers a new approach to reducing manual effort in 3D game-map creation.
         </p>
       </div>
     </div>
