@@ -128,25 +128,22 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="videos-container" style="display: flex; justify-content: center; gap: 20px;">
-        <!-- TODO: replace each source with your own clip in static/videos/ -->
+      <!-- align-items: flex-end keeps the three captions on one line even though
+           the assets have slightly different aspect ratios -->
+      <div class="videos-container" style="display: flex; justify-content: center; align-items: flex-end; gap: 20px;">
         <div style="text-align: center;">
-          <video autoplay muted loop playsinline poster="./static/images/placeholder.png" style="width: 100%; max-width: 300px;">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
+          <img src="./static/images/input1.png" alt="Input frame" style="width: 100%; max-width: 300px;"/>
           <p><strong>Input</strong></p>
         </div>
         <div style="text-align: center;">
-          <video autoplay muted loop playsinline poster="./static/images/placeholder.png" style="width: 100%; max-width: 300px;">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          <video autoplay muted loop playsinline poster="./static/images/input1.png" style="width: 100%; max-width: 300px;">
+            <source src="./static/videos/video1.mp4" type="video/mp4">
           </video>
-          <p><strong>Intermediate Result</strong></p>
+          <p><strong>Video</strong></p>
         </div>
         <div style="text-align: center;">
-          <video autoplay muted loop playsinline poster="./static/images/placeholder.png" style="width: 100%; max-width: 300px;">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
-          <p><strong>Ours</strong></p>
+          <img src="./static/images/map1.png" alt="Reconstructed point map" style="width: 100%; max-width: 300px;"/>
+          <p><strong>Point Map</strong></p>
         </div>
       </div>
       <h2 class="subtitle has-text-centered">
