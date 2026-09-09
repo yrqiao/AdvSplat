@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- TODO: one-sentence description of the project (used by search engines and link previews) -->
+    <meta name="description"
+          content="VALERANT project page.">
+    <!-- TODO: comma-separated keywords -->
+    <meta name="keywords" content="VALERANT">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TODO: text shown in the browser tab -->
+    <title>VALERANT</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- TODO: replace with your own favicon in static/images/ -->
+    <!-- <link rel="icon" href="./static/images/favicon.png"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- Title, authors and links -->
+<section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: paper title. Optionally prefix a logo:
+                 <img src="./static/images/logo.png" width="42"> -->
+            <h1 class="title is-1 publication-title">VALERANT: Full Title of Your Paper Goes Here</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: venue, e.g. ICLR 2027. Delete this line if under review. -->
+              <h1 class="title is-3 publication-title">Venue Year</h1>
+
+              <!-- TODO: authors. Add or delete author-block spans as needed. -->
+              <span class="author-block">
+                <a href="#" target="_blank">First Author</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Second Author</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="#" target="_blank">Third Author</a>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: affiliation(s) -->
+              <span class="author-block">Your Institution</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+
+                <!-- Paper PDF link -->
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Supplementary PDF link -->
+                <!-- <span class="link-block">
+                  <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+
+                <!-- arXiv link -->
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Code link -->
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Dataset link -->
+                <span class="link-block">
+                  <a href="#" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- End title, authors and links -->
+
+<!-- Teaser: side-by-side videos -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="videos-container" style="display: flex; justify-content: center; gap: 20px;">
+        <!-- TODO: replace each source with your own clip in static/videos/ -->
+        <div style="text-align: center;">
+          <video autoplay muted loop playsinline poster="./static/images/placeholder.png" style="width: 100%; max-width: 300px;">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+          <p><strong>Input</strong></p>
+        </div>
+        <div style="text-align: center;">
+          <video autoplay muted loop playsinline poster="./static/images/placeholder.png" style="width: 100%; max-width: 300px;">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+          <p><strong>Intermediate Result</strong></p>
+        </div>
+        <div style="text-align: center;">
+          <video autoplay muted loop playsinline poster="./static/images/placeholder.png" style="width: 100%; max-width: 300px;">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+          <p><strong>Ours</strong></p>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        <!-- TODO: one- or two-sentence teaser caption. Highlight terms like this:
+             <b><span style="color:#f03a17">VALERANT</span></b> or <b><span style="color:#209cee">key idea</span></b> -->
+        A short caption describing what the teaser shows and what
+        <b><span style="color:#f03a17">VALERANT</span></b> does.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser -->
+
+<!-- Abstract -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Abstract</h2>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          <!-- TODO: paste your abstract here. -->
+          Your abstract goes here.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End abstract -->
+
+<!-- Motivation / background figure -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <!-- TODO: section title -->
+        <h2 class="title is-3">Motivation</h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <!-- TODO: replace with your own figure in static/images/ -->
+        <img src="./static/images/placeholder.png" alt="Motivation figure" style="width: 70%; height: auto;"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          <!-- TODO: figure caption -->
+          <b>Figure caption.</b> Describe the figure here.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End motivation -->
+
+<!-- Pipeline -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Pipeline</h2>
+      </div>
+      <div class="item">
+        <!-- TODO: replace with your pipeline figure in static/images/ -->
+        <img src="./static/images/placeholder.png" alt="Pipeline figure"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          <!-- TODO: describe your method / pipeline -->
+          An overview of the pipeline. Describe each stage of your method here.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End pipeline -->
+
+<!-- Qualitative comparison: one column per method -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <!-- TODO: section title, e.g. "Results on <task>" -->
+        <h2 class="title is-3">Results</h2>
+      </div>
+      <div class="content has-text-justified">
+        <p class="content">
+          <!-- TODO: describe the comparison and what to look at -->
+          Describe the comparison against baselines and point out where
+          <b><span style="color:#f03a17">VALERANT</span></b> does better.
+        </p>
+      </div>
+      <div class="columns is-centered">
+        <!-- TODO: duplicate/delete columns to match your number of baselines -->
+        <div class="column content has-text-centered">
+          <h2 class="title is-6">Baseline A</h2>
+          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column content has-text-centered">
+          <h2 class="title is-6">Baseline B</h2>
+          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column content has-text-centered">
+          <h2 class="title is-6">Baseline C</h2>
+          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column content has-text-centered">
+          <h2 class="title is-6">VALERANT (Ours)</h2>
+          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End qualitative comparison -->
+
+<!-- Carousel of extra results -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <!-- TODO: section title, e.g. "More Results" or "Dataset" -->
+      <h2 class="title">More Results</h2>
+      <div class="content has-text-justified">
+        <p class="content">
+          <!-- TODO: describe what the carousel shows -->
+          Describe the additional results or the dataset shown below.
+        </p>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <!-- TODO: one .item per carousel entry; each item can hold one or more videos/images -->
+        <div class="item rounded-0 border-0">
+          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item rounded-0 border-0">
+          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item rounded-0 border-0">
+          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item rounded-0 border-0">
+          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="item rounded-0 border-0">
+          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
+            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End carousel -->
+<br/>
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <p>If you find our work helpful, please consider citing us:</p>
+    <!-- TODO: replace with your BibTeX entry -->
+    <pre><code>@inproceedings{yourkey,
+  title={Full Title of Your Paper},
+  author={Last, First and Last, First},
+  booktitle={Proceedings of the Venue},
+  year={2027}
+}
+</code></pre>
+  </div>
+</section>
+<!-- End BibTeX -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.</p>
+          <p>
+            This website is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
