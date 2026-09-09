@@ -128,21 +128,19 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- align-items: flex-end keeps the three captions on one line even though
-           the assets have slightly different aspect ratios -->
-      <div class="videos-container" style="display: flex; justify-content: center; align-items: flex-end; gap: 20px;">
+      <div class="videos-container" style="display: flex; justify-content: center; gap: 20px;">
         <div style="text-align: center;">
-          <img src="./static/images/input1.png" alt="Input frame" style="width: 100%; max-width: 300px;"/>
+          <img class="teaser-media" src="./static/images/input1.png" alt="Input frame"/>
           <p><strong>Input</strong></p>
         </div>
         <div style="text-align: center;">
-          <video autoplay muted loop playsinline poster="./static/images/input1.png" style="width: 100%; max-width: 300px;">
+          <video class="teaser-media" autoplay muted loop playsinline poster="./static/images/input1.png">
             <source src="./static/videos/video1.mp4" type="video/mp4">
           </video>
           <p><strong>Video</strong></p>
         </div>
         <div style="text-align: center;">
-          <img src="./static/images/map1.png" alt="Reconstructed point map" style="width: 100%; max-width: 300px;"/>
+          <img class="teaser-media" src="./static/images/map1.png" alt="Reconstructed point map"/>
           <p><strong>Point Map</strong></p>
         </div>
       </div>
