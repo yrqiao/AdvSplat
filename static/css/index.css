@@ -194,3 +194,15 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+/* bulma forces links inside a coloured hero to color: inherit via a selector
+   specific enough (0,7,1) to beat anything reasonable here, which leaves an
+   attribution or reference link looking like plain body text. Put them back on
+   the blue the author links already use. */
+.hero.is-light .content a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.hero.is-light .content a:hover {
+  text-decoration: underline;
+}
