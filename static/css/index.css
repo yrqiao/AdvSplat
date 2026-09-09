@@ -156,15 +156,41 @@ body {
   border-radius: 5px;
 }
 
-/* Teaser row: every item renders at exactly the same size whatever its source
-   aspect ratio is, so the three boxes and their captions line up. 16:9 is
-   exact for the input frame, trims ~1% off the clip's sides and 36px of empty
-   black from the point map. */
+/* Teaser row: every item renders in the same 16:9 box whatever its source
+   aspect ratio is, so the three line up and their captions share a baseline.
+   16:9 is exact for the input frame, trims ~1% off the clip's sides and 36px
+   of empty black from the point map.
+
+   The ratio comes from padding-top rather than aspect-ratio: percentage
+   padding resolves against .teaser-item's definite width, which holds even
+   where aspect-ratio on a replaced element -- <video> especially -- is not. */
+.teaser-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.teaser-item {
+  width: 300px;
+  max-width: 100%;
+  text-align: center;
+}
+
 .teaser-media {
-  display: block;
-  margin: 0 auto;
+  position: relative;
   width: 100%;
-  max-width: 300px;
-  aspect-ratio: 16 / 9;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.teaser-media > img,
+.teaser-media > video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }

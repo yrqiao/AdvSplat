@@ -128,19 +128,25 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="videos-container" style="display: flex; justify-content: center; gap: 20px;">
-        <div style="text-align: center;">
-          <img class="teaser-media" src="./static/images/input1.png" alt="Input frame"/>
+      <div class="teaser-row">
+        <div class="teaser-item">
+          <div class="teaser-media">
+            <img src="./static/images/input1.png" alt="Input frame"/>
+          </div>
           <p><strong>Input</strong></p>
         </div>
-        <div style="text-align: center;">
-          <video class="teaser-media" autoplay muted loop playsinline poster="./static/images/input1.png">
-            <source src="./static/videos/video1.mp4" type="video/mp4">
-          </video>
+        <div class="teaser-item">
+          <div class="teaser-media">
+            <video autoplay muted loop playsinline poster="./static/images/input1.png">
+              <source src="./static/videos/video1.mp4" type="video/mp4">
+            </video>
+          </div>
           <p><strong>Video</strong></p>
         </div>
-        <div style="text-align: center;">
-          <img class="teaser-media" src="./static/images/map1.png" alt="Reconstructed point map"/>
+        <div class="teaser-item">
+          <div class="teaser-media">
+            <img src="./static/images/map1.png" alt="Reconstructed point map"/>
+          </div>
           <p><strong>Point Map</strong></p>
         </div>
       </div>
