@@ -156,14 +156,32 @@ body {
   border-radius: 5px;
 }
 
-/* Teaser row: every item renders in the same 16:9 box whatever its source
-   aspect ratio is, so the three line up and their captions share a baseline.
-   16:9 is exact for the input frame, trims ~1% off the clip's sides and 36px
-   of empty black from the point map.
+/* A fixed 16:9 box, used by the teaser row and the results grid: every item
+   renders at the same size whatever its source aspect ratio is, so cells and
+   captions line up. The ratio comes from padding-top rather than
+   aspect-ratio, because percentage padding resolves against the parent's
+   definite width -- which holds even where aspect-ratio on a replaced element,
+   <video> especially, does not. 16:9 is exact for the input frames, trims ~1%
+   off the clips' sides and a little empty black off the point maps. */
+.media-16x9 {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
 
-   The ratio comes from padding-top rather than aspect-ratio: percentage
-   padding resolves against .teaser-item's definite width, which holds even
-   where aspect-ratio on a replaced element -- <video> especially -- is not. */
+.media-16x9 > img,
+.media-16x9 > video {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Teaser row */
 .teaser-row {
   display: flex;
   justify-content: center;
@@ -177,22 +195,44 @@ body {
   text-align: center;
 }
 
-.teaser-media {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  overflow: hidden;
+/* Results grid: one row per scene, one column per output. */
+.results-grid {
+  display: grid;
+  grid-template-columns: 7rem repeat(3, 1fr);
+  gap: 12px;
+  align-items: center;
 }
 
-.teaser-media > img,
-.teaser-media > video {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.results-grid-head {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Scene names; the colours are the ones Figure 2 of the paper uses. */
+.results-grid-label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* Too narrow for a label column: each scene name becomes a full-width
+     heading above its own row of three. */
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .results-grid-corner {
+    display: none;
+  }
+
+  .results-grid-label {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-right: 0;
+    margin-top: 0.75rem;
+  }
 }
 
 /* bulma forces links inside a coloured hero to color: inherit via a selector

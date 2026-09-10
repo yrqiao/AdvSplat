@@ -130,22 +130,22 @@
     <div class="hero-body">
       <div class="teaser-row">
         <div class="teaser-item">
-          <div class="teaser-media">
-            <img src="./static/images/input1.png" alt="Input frame"/>
+          <div class="media-16x9">
+            <img src="./static/images/input1.jpg" alt="Input frame"/>
           </div>
           <p><strong>Input</strong></p>
         </div>
         <div class="teaser-item">
-          <div class="teaser-media">
-            <video autoplay muted loop playsinline poster="./static/images/input1.png">
+          <div class="media-16x9">
+            <video autoplay muted loop playsinline poster="./static/images/input1.jpg">
               <source src="./static/videos/video1.mp4" type="video/mp4">
             </video>
           </div>
           <p><strong>Video</strong></p>
         </div>
         <div class="teaser-item">
-          <div class="teaser-media">
-            <img src="./static/images/map1.png" alt="Reconstructed point map"/>
+          <div class="media-16x9">
+            <img src="./static/images/map1.jpg" alt="Reconstructed point map"/>
           </div>
           <p><strong>Point Map</strong></p>
         </div>
@@ -243,113 +243,69 @@
 </section>
 <!-- End pipeline -->
 
-<!-- Qualitative comparison: one column per method -->
+<!-- More Results: one row per scene -->
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <!-- TODO: section title, e.g. "Results on <task>" -->
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-3">More Results</h2>
       </div>
       <div class="content has-text-justified">
         <p class="content">
-          <!-- TODO: describe the comparison and what to look at -->
-          Describe the comparison against baselines and point out where
-          <b><span style="color:#f03a17">VALERANT</span></b> does better.
+          Each row is one VALORANT map. From the single input frame on the left,
+          <b><span style="color:#f03a17">VALERANT</span></b> explores the scene and produces the
+          exploration video and the reconstructed point-cloud map beside it.
         </p>
       </div>
-      <div class="columns is-centered">
-        <!-- TODO: duplicate/delete columns to match your number of baselines -->
-        <div class="column content has-text-centered">
-          <h2 class="title is-6">Baseline A</h2>
-          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+      <div class="results-grid">
+        <div class="results-grid-corner"></div>
+        <div class="results-grid-head">Input</div>
+        <div class="results-grid-head">Video</div>
+        <div class="results-grid-head">Point Map</div>
+
+        <div class="results-grid-label" style="color: #46B1E1;">Pearl</div>
+        <div class="media-16x9">
+          <img src="./static/images/input2.jpg" alt="Input frame from Pearl"/>
+        </div>
+        <div class="media-16x9">
+          <video autoplay muted loop playsinline poster="./static/images/input2.jpg">
+            <source src="./static/videos/video2.mp4" type="video/mp4">
           </video>
         </div>
-
-        <div class="column content has-text-centered">
-          <h2 class="title is-6">Baseline B</h2>
-          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
+        <div class="media-16x9">
+          <img src="./static/images/map2.jpg" alt="Reconstructed point map of Pearl"/>
         </div>
 
-        <div class="column content has-text-centered">
-          <h2 class="title is-6">Baseline C</h2>
-          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+        <div class="results-grid-label" style="color: #F2AA84;">Fracture</div>
+        <div class="media-16x9">
+          <img src="./static/images/input3.jpg" alt="Input frame from Fracture"/>
+        </div>
+        <div class="media-16x9">
+          <video autoplay muted loop playsinline poster="./static/images/input3.jpg">
+            <source src="./static/videos/video3.mp4" type="video/mp4">
           </video>
         </div>
+        <div class="media-16x9">
+          <img src="./static/images/map3.jpg" alt="Reconstructed point map of Fracture"/>
+        </div>
 
-        <div class="column content has-text-centered">
-          <h2 class="title is-6">VALERANT (Ours)</h2>
-          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
+        <div class="results-grid-label" style="color: #577500;">Abyss</div>
+        <div class="media-16x9">
+          <img src="./static/images/input4.jpg" alt="Input frame from Abyss"/>
+        </div>
+        <div class="media-16x9">
+          <video autoplay muted loop playsinline poster="./static/images/input4.jpg">
+            <source src="./static/videos/video4.mp4" type="video/mp4">
           </video>
-          <video autoplay muted loop playsinline height="100%" class="other-video" poster="./static/images/placeholder.png">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
+        </div>
+        <div class="media-16x9">
+          <img src="./static/images/map4.jpg" alt="Reconstructed point map of Abyss"/>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End qualitative comparison -->
-
-<!-- Carousel of extra results -->
-<section class="hero">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <!-- TODO: section title, e.g. "More Results" or "Dataset" -->
-      <h2 class="title">More Results</h2>
-      <div class="content has-text-justified">
-        <p class="content">
-          <!-- TODO: describe what the carousel shows -->
-          Describe the additional results or the dataset shown below.
-        </p>
-      </div>
-      <div id="results-carousel" class="carousel results-carousel">
-        <!-- TODO: one .item per carousel entry; each item can hold one or more videos/images -->
-        <div class="item rounded-0 border-0">
-          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item rounded-0 border-0">
-          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item rounded-0 border-0">
-          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item rounded-0 border-0">
-          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item rounded-0 border-0">
-          <video poster="./static/images/placeholder.png" autoplay muted loop playsinline preload="none" class="w-auto" style="height:22vh;">
-            <source src="./static/videos/placeholder.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End carousel -->
-<br/>
+<!-- End more results -->
 
 <!-- BibTeX -->
 <section class="section" id="BibTeX">
