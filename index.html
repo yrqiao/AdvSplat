@@ -225,13 +225,17 @@
         <h2 class="title is-3">Pipeline</h2>
       </div>
       <div class="item">
-        <!-- TODO: replace with your pipeline figure in static/images/ -->
-        <img src="./static/images/placeholder.png" alt="Pipeline figure"/>
+        <img src="./static/images/pipeline.png" alt="Overview of the VALERANT pipeline. The upper panel is a schematic of the closed-loop execution: a WAM stage generating what-if video rollouts from candidate actions, a SLAM stage reconstructing candidate geometry, and a policy stage evaluating and committing the best branch, looping until the step budget is spent. The lower panel walks the same loop through an example scene, branching on go left, go straight and go right."/>
       </div>
       <div class="content has-text-justified">
         <p>
-          <!-- TODO: describe your method / pipeline -->
-          An overview of the pipeline. Describe each stage of your method here.
+          Overview of <b><span style="color:#f03a17">VALERANT</span></b>. Starting from a single input
+          image, a virtual agent queries the WM with candidate actions to generate alternative what-if
+          video rollouts. Visual SLAM reconstructs the corresponding 3D geometry, and an exploration
+          policy selects the branch with the highest mapping utility. The selected observations are
+          committed to a persistent point-cloud map, which is iteratively expanded into the final 3D game
+          map. The upper panel provides a schematic illustration of the pipeline, while the lower panel
+          demonstrates the process using an example scene.
         </p>
       </div>
     </div>
