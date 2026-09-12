@@ -109,38 +109,42 @@
 </section>
 <!-- End title, authors and links -->
 
-<!-- Teaser: side-by-side videos -->
+<!-- Teaser: content image, style image, 3D asset -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="teaser-row">
         <div class="teaser-item">
-          <div class="media-16x9">
-            <img src="./static/images/input1.jpg" alt="Input frame"/>
+          <div class="media-1x1">
+            <img src="./static/images/group1/content.png" alt="Content image"/>
           </div>
-          <p><strong>Input</strong></p>
+          <p><strong>Content Image</strong></p>
         </div>
         <div class="teaser-item">
-          <div class="media-16x9">
-            <video autoplay muted loop playsinline poster="./static/images/input1.jpg">
-              <source src="./static/videos/video1.mp4" type="video/mp4">
+          <div class="media-1x1">
+            <img src="./static/images/group1/style.jpg" alt="Style image"/>
+          </div>
+          <p><strong>Style Image</strong></p>
+        </div>
+        <div class="teaser-item">
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/group1/3d_asset.mp4" type="video/mp4">
             </video>
           </div>
-          <p><strong>Video</strong></p>
-        </div>
-        <div class="teaser-item">
-          <div class="media-16x9">
-            <img src="./static/images/map1.jpg" alt="Reconstructed point map"/>
-          </div>
-          <p><strong>Point Map</strong></p>
+          <p><strong>3D Asset</strong></p>
         </div>
       </div>
       <h2 class="subtitle has-text-centered">
-        Given a <b>single frame</b> of a game as input, <b><span style="color:#f03a17">VALERANT</span></b>
-        spawns a virtual agent that explores the scene on its own. An action-conditioned world model rolls
-        out a <b><span style="color:#209cee">smooth, collision-free video</span></b> of that exploration,
-        and the corresponding <b><span style="color:#209cee">point-cloud game map</span></b> is
-        reconstructed at the same time.
+        Style-controllable 3D generation breaks down as soon as the target style drifts
+        <b><span style="color:#209cee">out of the generator&rsquo;s training distribution</span></b>. We find the
+        bottleneck is not model capacity &mdash; <b><span style="color:#209cee">structured 3D latents</span></b> are
+        already expressive, merely underused. We therefore introduce
+        <b><span style="color:#f03a17">DiLAST</span></b>: 2D <u>Di</u>ffusion-based <u>L</u>atent <u>A</u>wakening
+        for 3D <u>S</u>tyle <u>T</u>ransfer, which turns a pretrained 2D diffusion model into a teacher: by
+        aligning rendered views with the target style under diffusion guidance, it optimizes the structured 3D
+        latents directly. A content image and an arbitrary style image are enough to produce a stylized 3D asset,
+        and the method is <b><span style="color:#209cee">plug-and-play</span></b> across 3D generation backbones.
       </h2>
     </div>
   </div>

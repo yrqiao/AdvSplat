@@ -170,8 +170,18 @@ body {
   overflow: hidden;
 }
 
+/* Square variant, for content / style / asset triplets. */
+.media-1x1 {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
 .media-16x9 > img,
-.media-16x9 > video {
+.media-16x9 > video,
+.media-1x1 > img,
+.media-1x1 > video {
   display: block;
   position: absolute;
   top: 0;
