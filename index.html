@@ -183,26 +183,29 @@
 </section>
 <!-- End abstract -->
 
-<!-- Definitions and Formalism -->
+<!-- Motivation -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="columns is-centered has-text-centered">
-        <h2 class="title is-3">Definitions and Formalism</h2>
+        <h2 class="title is-3">Motivation</h2>
       </div>
-      <div class="item" style="text-align: center;">
-        <img src="./static/images/WAM.png" alt="Conceptual comparison of VLA, WAM and WM: a VLA maps an observation and a language instruction to an action, a WAM maps them to both the next observation and an action, and a WM maps an observation and an action to the next observation." style="width: 70%; height: auto;"/>
+      <div class="item">
+        <img src="./static/images/Figure1.png" alt="Comparison of the previous 3D style transfer pipeline and the DiLAST pipeline. Panel (a) shows the previous pipeline, where a content image and an out-of-distribution style image are fed through frozen flow transformers whose internal query, key and value attention is shared, and the resulting style-transferred 3D asset fails. Panel (b) shows the DiLAST pipeline, where a single content image produces a 3D structure latent that is decoded into a 3D asset in 3DGS format, rendered, and scored by a frozen 2D diffusion teacher whose attention distillation gradient flows back into the latent, succeeding on the same style."/>
       </div>
-      <div class="content has-text-centered">
+      <div class="content has-text-justified">
         <p>
-          Conceptual definition and comparison of VLA, WM, and WAM.
-          Figure from <a href="https://openmoss.ai/Awesome-WAM/" target="_blank">Awesome-WAM</a>.
+          Comparison of existing 3D style transfer methods and our <b><span style="color:#f03a17">DiLAST</span></b>
+          pipeline. <b>(a)</b> Existing methods rely solely on internal attention of 3D generative models and often
+          fail when handling OOD styles. <b>(b)</b> In contrast, <b><span style="color:#f03a17">DiLAST</span></b>
+          leverages a pretrained 2D diffusion teacher, whose attention distillation gradients guide the denoising
+          trajectory of 3D latents, successfully transferring arbitrary OOD styles.
         </p>
       </div>
     </div>
   </div>
 </section>
-<!-- End definitions and formalism -->
+<!-- End motivation -->
 
 <!-- Pipeline -->
 <section class="section hero">
