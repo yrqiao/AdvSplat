@@ -213,6 +213,14 @@ body {
   align-items: center;
 }
 
+/* content.png is transparent, style.jpg is opaque and video.mp4 is white-backed,
+   so without a background the content row reads as floating objects while the
+   other two read as solid tiles. One white tile behind every cell lines the
+   three rows up. */
+.results-grid .media-1x1 {
+  background: #fff;
+}
+
 /* Stage names down the left-hand side. */
 .results-grid-label {
   font-size: 1rem;
