@@ -230,6 +230,225 @@
 </section>
 <!-- End detailed pipeline -->
 
+<!-- Baseline comparison -->
+<section class="section hero">
+  <div class="container is-max-widescreen">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Baseline Comparison</h2>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Qualitative comparison against 3D style transfer baselines. Each column is one style image (top row)
+          and each row is one content image (left of the row), repeated for the three methods. MorphAny3D and
+          StyleSculptor drift away from the content geometry once the style is out of distribution, while
+          <b><span style="color:#f03a17">DiLAST</span></b> keeps the object intact and still takes on the style.
+          Every result is a rendered orbit of the generated 3D asset.
+        </p>
+      </div>
+      <div class="bl-scroll">
+        <div class="bl-grid">
+          <div></div>
+          <div class="bl-corner"><span class="bl-style">Style</span><span class="bl-content">Content</span></div>
+          <div class="media-1x1">
+            <img src="./static/images/baselines/style/66.jpg" alt="Style image 66"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/baselines/style/72.jpg" alt="Style image 72"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/baselines/style/84.jpg" alt="Style image 84"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/baselines/style/112.jpg" alt="Style image 112"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/baselines/style/119.jpg" alt="Style image 119"/>
+          </div>
+
+          <div class="bl-method"><span>MorphAny3D</span></div>
+          <div class="media-1x1">
+            <img src="./static/images/baselines/content/typical_creature_rock_monster.png" alt="Content image, rock monster"/>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_creature_rock_monster%2B66.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_creature_rock_monster%2B72.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_creature_rock_monster%2B84.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_creature_rock_monster%2B112.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_creature_rock_monster%2B119.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="media-1x1">
+            <img src="./static/images/baselines/content/typical_misc_lantern.png" alt="Content image, lantern"/>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_misc_lantern%2B66.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_misc_lantern%2B72.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_misc_lantern%2B84.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_misc_lantern%2B112.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/MorphAny3D/final_typical_misc_lantern%2B119.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="bl-method"><span>StyleSculptor</span></div>
+          <div class="media-1x1">
+            <img src="./static/images/baselines/content/typical_creature_rock_monster.png" alt="Content image, rock monster"/>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_creature_rock_monster_66_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_creature_rock_monster_72_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_creature_rock_monster_84_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_creature_rock_monster_112_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_creature_rock_monster_119_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="media-1x1">
+            <img src="./static/images/baselines/content/typical_misc_lantern.png" alt="Content image, lantern"/>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_misc_lantern_66_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_misc_lantern_72_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_misc_lantern_84_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_misc_lantern_112_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/StyleSculptor/typical_misc_lantern_119_intensity5.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="bl-method"><span>DiLAST (Ours)</span></div>
+          <div class="media-1x1">
+            <img src="./static/images/baselines/content/typical_creature_rock_monster.png" alt="Content image, rock monster"/>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_creature_rock_monster_to_66_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_creature_rock_monster_to_72_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_creature_rock_monster_to_84_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_creature_rock_monster_to_112_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_creature_rock_monster_to_119_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="media-1x1">
+            <img src="./static/images/baselines/content/typical_misc_lantern.png" alt="Content image, lantern"/>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_misc_lantern_to_66_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_misc_lantern_to_72_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_misc_lantern_to_84_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_misc_lantern_to_112_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/baselines/DiLAST/distill_typical_misc_lantern_to_119_edge_cl0.2_sl20.0_tv0.0_lr5_v6_gs.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End baseline comparison -->
+
 <!-- More Results: one column per example -->
 <section class="hero is-light">
   <div class="hero-body">

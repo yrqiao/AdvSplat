@@ -242,6 +242,71 @@ body {
   }
 }
 
+/* Baseline comparison: style images across the top, content image down the
+   left of each row, one row group per method. Mirrors Figure 4 of the paper. */
+.bl-grid {
+  display: grid;
+  grid-template-columns: 2.2rem repeat(6, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+
+/* Method names, set bottom-to-top in a bracket, spanning the two content rows. */
+.bl-method {
+  grid-row: span 2;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 3px solid #b5b5b5;
+  border-top: 3px solid #b5b5b5;
+  border-bottom: 3px solid #b5b5b5;
+}
+
+.bl-method > span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* The split Content / Style corner of the table. */
+.bl-corner {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background: linear-gradient(to top right, #d5dcf1 0 49.6%, #fff2d0 50.4% 100%);
+}
+
+.bl-corner > span {
+  position: absolute;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.bl-corner > .bl-style {
+  top: 12%;
+  right: 10%;
+}
+
+.bl-corner > .bl-content {
+  bottom: 12%;
+  left: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  /* Seven columns will not fit on a phone; scroll the table sideways. */
+  .bl-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .bl-grid {
+    min-width: 760px;
+  }
+}
+
 /* bulma forces links inside a coloured hero to color: inherit via a selector
    specific enough (0,7,1) to beat anything reasonable here, which leaves an
    attribution or reference link looking like plain body text. Put them back on
