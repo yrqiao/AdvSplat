@@ -160,24 +160,22 @@
       </div>
       <div class="content has-text-justified">
         <p>
-          World Action Models (WAMs) couple predictive world modeling with action generation, allowing
-          anticipated future states to guide agent behavior. Although WAMs are rapidly advancing embodied
-          AI, general-purpose counterparts remain largely unexplored in games. Existing game-oriented
-          approaches often combine action-conditioned world models with external policies and reward
-          functions to realize WAM-like decision-making, yet they operate mainly in 2D visual observation
-          space and do not instantiate persistent 3D geometry. Extending this paradigm to 3D games
-          introduces a distinct challenge. In autonomous driving and robotics, the physical environment
-          exists independently of the model, providing a persistent 3D world in which selected actions can
-          be executed. Games have no such external substrate; the virtual world itself must be
-          instantiated. Most playable games require a persistent and navigable space, while 3D games
-          additionally require explicit geometry that supports movement and interaction. Action-conditioned
-          video rollouts provide visual observations but not this spatial representation. We present
-          <b><span style="color:#f03a17">VALERANT</span></b>, a <b>training-free</b> framework that transforms a pretrained action-conditioned
-          world model into a WAM for exploring and constructing 3D game maps. By coupling
-          <b><span style="color:#209cee">predictive visual rollouts</span></b> with <b><span style="color:#209cee">SLAM-based spatial reconstruction</span></b> and
-          <b><span style="color:#209cee">exploration-driven action selection</span></b>, <b><span style="color:#f03a17">VALERANT</span></b> progressively transforms a single
-          image into a persistent 3D game map. This framework extends WAM-based interaction beyond 2D
-          visual simulation and offers a new approach to reducing manual effort in 3D game-map creation.
+          3D asset generation plays a pivotal role in fields such as gaming and virtual reality, enabling the
+          rapid synthesis of high-fidelity 3D objects from a single or multiple images. Building on this
+          capability, enabling style-controllable generation naturally emerges as an important and desirable
+          direction. However, existing approaches typically rely on style images that lie within or are similar
+          to the training distribution of 3D generation models. When presented with out-of-distribution (OOD)
+          styles, their performance degrades significantly or even fails. To address this limitation, we
+          introduce <b><span style="color:#f03a17">DiLAST</span></b>: 2D <u>Di</u>ffusion-based <u>L</u>atent
+          <u>A</u>wakening for 3D <u>S</u>tyle <u>T</u>ransfer. Specifically, we leverage a pretrained 2D
+          diffusion model as a teacher to provide rich and generalizable style priors. By aligning rendered
+          views with the target style under diffusion-based guidance, our method optimizes the structured 3D
+          latent representations for stylization. We observe that this limitation stems not from insufficient
+          model capacity, but from the underutilization of structured 3D latents, which are inherently
+          expressive. Despite being trained on comparatively limited data, 3D generation models can leverage 2D
+          diffusion guidance to steer denoising toward specific directions in latent space, thereby producing
+          diverse, OOD styles. Extensive experiments across diverse data and multiple 3D generation backbones
+          demonstrate the effectiveness and plug-and-play nature of our approach.
         </p>
       </div>
     </div>
