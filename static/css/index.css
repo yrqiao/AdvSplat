@@ -205,43 +205,32 @@ body {
   text-align: center;
 }
 
-/* Results grid: one row per scene, one column per output. */
+/* Results grid: one column per example, one row per stage. */
 .results-grid {
   display: grid;
-  grid-template-columns: 7rem repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: 4.5rem repeat(6, 1fr);
+  gap: 10px;
   align-items: center;
 }
 
-.results-grid-head {
-  text-align: center;
-  font-weight: 600;
-}
-
-/* Scene names; the colours are the ones Figure 2 of the paper uses. */
+/* Stage names down the left-hand side. */
 .results-grid-label {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 700;
   text-align: right;
   padding-right: 0.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  /* Too narrow for a label column: each scene name becomes a full-width
-     heading above its own row of three. */
+  /* Seven columns will not fit on a phone. Scroll the grid sideways rather
+     than shrink every cell into nothing. */
+  .results-grid-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .results-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .results-grid-corner {
-    display: none;
-  }
-
-  .results-grid-label {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding-right: 0;
-    margin-top: 0.75rem;
+    min-width: 620px;
   }
 }
 

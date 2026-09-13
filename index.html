@@ -230,7 +230,7 @@
 </section>
 <!-- End detailed pipeline -->
 
-<!-- More Results: one row per scene -->
+<!-- More Results: one column per example -->
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -238,55 +238,85 @@
         <h2 class="title is-3">More Results</h2>
       </div>
       <div class="content has-text-justified">
-        <p class="content">
-          Each row is one VALORANT map. From the single input frame on the left,
-          <b><span style="color:#f03a17">VALERANT</span></b> explores the scene and produces the
-          exploration video and the reconstructed point-cloud map beside it.
+        <p>
+          Each column is one example. From the <b>content image</b> in the first row and the
+          <b>style image</b> in the second, <b><span style="color:#f03a17">DiLAST</span></b> produces the
+          <b>stylized 3D asset</b> shown in the third row.
         </p>
       </div>
-      <div class="results-grid">
-        <div class="results-grid-corner"></div>
-        <div class="results-grid-head">Input</div>
-        <div class="results-grid-head">Video</div>
-        <div class="results-grid-head">Point Map</div>
+      <div class="results-grid-scroll">
+        <div class="results-grid">
+          <div class="results-grid-label">Content</div>
+          <div class="media-1x1">
+            <img src="./static/images/group2/content.png" alt="Content image for example 1"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group3/content.png" alt="Content image for example 2"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group4/content.png" alt="Content image for example 3"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group5/content.png" alt="Content image for example 4"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group6/content.png" alt="Content image for example 5"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group7/content.png" alt="Content image for example 6"/>
+          </div>
 
-        <div class="results-grid-label" style="color: #46B1E1;">Pearl</div>
-        <div class="media-16x9">
-          <img src="./static/images/input2.jpg" alt="Input frame from Pearl"/>
-        </div>
-        <div class="media-16x9">
-          <video autoplay muted loop playsinline poster="./static/images/input2.jpg">
-            <source src="./static/videos/video2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="media-16x9">
-          <img src="./static/images/map2.jpg" alt="Reconstructed point map of Pearl"/>
-        </div>
+          <div class="results-grid-label">Style</div>
+          <div class="media-1x1">
+            <img src="./static/images/group2/style.jpg" alt="Style image for example 1"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group3/style.jpg" alt="Style image for example 2"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group4/style.jpg" alt="Style image for example 3"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group5/style.jpg" alt="Style image for example 4"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group6/style.jpg" alt="Style image for example 5"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/group7/style.jpg" alt="Style image for example 6"/>
+          </div>
 
-        <div class="results-grid-label" style="color: #F2AA84;">Fracture</div>
-        <div class="media-16x9">
-          <img src="./static/images/input3.jpg" alt="Input frame from Fracture"/>
-        </div>
-        <div class="media-16x9">
-          <video autoplay muted loop playsinline poster="./static/images/input3.jpg">
-            <source src="./static/videos/video3.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="media-16x9">
-          <img src="./static/images/map3.jpg" alt="Reconstructed point map of Fracture"/>
-        </div>
-
-        <div class="results-grid-label" style="color: #577500;">Abyss</div>
-        <div class="media-16x9">
-          <img src="./static/images/input4.jpg" alt="Input frame from Abyss"/>
-        </div>
-        <div class="media-16x9">
-          <video autoplay muted loop playsinline poster="./static/images/input4.jpg">
-            <source src="./static/videos/video4.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="media-16x9">
-          <img src="./static/images/map4.jpg" alt="Reconstructed point map of Abyss"/>
+          <div class="results-grid-label">Video</div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/group2/video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/group3/video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/group4/video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/group5/video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/group6/video.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="media-1x1">
+            <video autoplay muted loop playsinline>
+              <source src="./static/images/group7/video.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </div>
