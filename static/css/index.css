@@ -247,23 +247,35 @@ body {
 }
 
 /* Two reference views stacked into the height of the single novel view beside
-   them, which is why the column is half as wide. Sizing them off the row's own
-   height rather than their width keeps the stack flush with that novel view
-   whatever the grid resolves the columns to; min-height: 0 lets them shrink
-   past their intrinsic height, so the stack never drives the row taller. */
+   them, which is why the column is half as wide.
+
+   Both are taken out of flow, so the stack contributes no height of its own and
+   the row is sized by the novel views alone; the stack then stretches to that
+   row and pins one view to its top and the other to its bottom, which is what
+   keeps the small images flush with the big ones top and bottom. Left in flow
+   they would instead each take their square intrinsic height, making the stack
+   exactly one gap taller than the novel views and hanging half a gap over each
+   end. Half the gap comes off each view so the two still clear each other. */
 .teaser-ref {
+  position: relative;
   align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .teaser-ref > img {
   display: block;
-  flex: 1;
-  min-height: 0;
+  position: absolute;
+  left: 0;
   width: 100%;
+  height: calc(50% - 5px);
   object-fit: cover;
+}
+
+.teaser-ref > img:first-child {
+  top: 0;
+}
+
+.teaser-ref > img:last-child {
+  bottom: 0;
 }
 
 @media screen and (max-width: 768px) {

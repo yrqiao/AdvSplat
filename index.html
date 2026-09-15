@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="description"
-          content="Project page for &quot;Structured 3D Latents Are Surprisingly Powerful: Unleashing Generalizable Style with 2D Diffusion&quot;.">
-    <meta name="keywords" content="structured 3D latents, 2D diffusion, generalizable style, 3D style transfer">
+          content="Project page for &quot;AdvSplat: Adversarial Attacks on Feed-Forward Gaussian Splatting Models&quot;.">
+    <meta name="keywords" content="adversarial attacks, feed-forward Gaussian splatting, 3D Gaussian splatting, black-box attacks, 3D reconstruction, robustness">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Structured 3D Latents Are Surprisingly Powerful: Unleashing Generalizable Style with 2D Diffusion</title>
+    <title>AdvSplat: Adversarial Attacks on Feed-Forward Gaussian Splatting Models</title>
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
@@ -37,9 +37,9 @@
           <div class="column has-text-centered">
             <!-- Optional: prefix the title with a logo,
                  <img src="./static/images/logo.png" width="42"> -->
-            <h1 class="title is-1 publication-title">Structured 3D Latents Are Surprisingly Powerful: Unleashing Generalizable Style with 2D Diffusion</h1>
+            <h1 class="title is-1 publication-title">AdvSplat: Adversarial Attacks on Feed-Forward Gaussian Splatting Models</h1>
             <div class="is-size-5 publication-authors">
-              <h1 class="title is-3 publication-title">arXiv 2026.05</h1>
+              <h1 class="title is-3 publication-title">arXiv 2026.03</h1>
 
               <span class="author-block">
                 <a href="https://yrqiao.github.io/" target="_blank">Yiran Qiao</a>,</span>
@@ -48,11 +48,9 @@
               <span class="author-block">
                 Yunlai Zhou,</span>
               <span class="author-block">
-                Disheng Liu,</span>
+                Rui Yang,</span>
               <span class="author-block">
                 Linlin Hou,</span>
-              <span class="author-block">
-                Rui Yang,</span>
               <span class="author-block">
                 Yu Yin,</span>
               <span class="author-block">
@@ -68,7 +66,7 @@
 
                 <!-- Paper PDF link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2605.04412" target="_blank"
+                  <a href="https://arxiv.org/pdf/2603.23686" target="_blank"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -152,11 +150,12 @@
         </div>
       </div>
       <h2 class="subtitle has-text-centered">
-        The same indoor scene, fitted from <b><span style="color:#209cee">clean reference views</span></b> on the
-        top row and from <b><span style="color:#f03a17">perturbed ones</span></b> on the bottom. Clean references
-        reconstruct the room faithfully, and every novel view comes back sharp. The perturbed references still
-        read as that same room &mdash; yet the scene fitted from them collapses, its novel views washing out and
-        smearing until the geometry is gone.
+        <b><span style="color:#f03a17">AdvSplat</span></b> attacks a feed-forward 3D Gaussian Splatting model
+        as a <b><span style="color:#209cee">black box</span></b>, without ever touching its weights or
+        gradients. Adding only a <b><span style="color:#209cee">subtle perturbation</span></b> to the input
+        views &mdash; which still read as the same room &mdash; is enough to
+        <b><span style="color:#f03a17">degrade the rendered novel views severely</span></b>: the reconstruction
+        washes out and smears until the geometry is gone.
       </h2>
     </div>
   </div>
@@ -172,22 +171,23 @@
       </div>
       <div class="content has-text-justified">
         <p>
-          3D asset generation plays a pivotal role in fields such as gaming and virtual reality, enabling the
-          rapid synthesis of high-fidelity 3D objects from a single or multiple images. Building on this
-          capability, enabling style-controllable generation naturally emerges as an important and desirable
-          direction. However, existing approaches typically rely on style images that lie within or are similar
-          to the training distribution of 3D generation models. When presented with out-of-distribution (OOD)
-          styles, their performance degrades significantly or even fails. To address this limitation, we
-          introduce <b><span style="color:#f03a17">DiLAST</span></b>: 2D <u>Di</u>ffusion-based <u>L</u>atent
-          <u>A</u>wakening for 3D <u>S</u>tyle <u>T</u>ransfer. Specifically, we leverage a pretrained 2D
-          diffusion model as a teacher to provide rich and generalizable style priors. By aligning rendered
-          views with the target style under diffusion-based guidance, our method optimizes the structured 3D
-          latent representations for stylization. We observe that this limitation stems not from insufficient
-          model capacity, but from the underutilization of structured 3D latents, which are inherently
-          expressive. Despite being trained on comparatively limited data, 3D generation models can leverage 2D
-          diffusion guidance to steer denoising toward specific directions in latent space, thereby producing
-          diverse, OOD styles. Extensive experiments across diverse data and multiple 3D generation backbones
-          demonstrate the effectiveness and plug-and-play nature of our approach.
+          3D Gaussian Splatting (3DGS) is increasingly recognized as a powerful paradigm for real-time,
+          high-fidelity 3D reconstruction. However, its per-scene optimization pipeline limits scalability and
+          generalization, and prevents efficient inference. Recently emerged feed-forward 3DGS models address
+          these limitations by enabling fast reconstruction from a few input views after large-scale
+          pretraining, without scene-specific optimization. Despite their advantages and strong potential for
+          commercial deployment, the use of neural networks as the backbone also amplifies the risk of
+          adversarial manipulation. In this paper, we introduce
+          <b><span style="color:#f03a17">AdvSplat</span></b>, the first systematic study of adversarial attacks
+          on feed-forward 3DGS. We first employ white-box attacks to reveal fundamental vulnerabilities of this
+          model family. We then develop two improved, practically relevant, query-efficient
+          <b><span style="color:#209cee">black-box</span></b> algorithms that optimize pixel-space perturbations
+          via a frequency-domain parameterization: one based on gradient estimation and the other
+          gradient-free, without requiring any access to model internals. Extensive experiments across multiple
+          datasets demonstrate that <b><span style="color:#f03a17">AdvSplat</span></b> can significantly disrupt
+          reconstruction results by injecting imperceptible perturbations into the input images. Our findings
+          surface an overlooked yet urgent problem in this domain, and we hope to draw the community&rsquo;s
+          attention to this emerging security and robustness challenge.
         </p>
       </div>
     </div>
@@ -658,10 +658,10 @@
   <div class="container is-max-desktop content">
     <h2 class="title">Citation</h2>
     <p>If you find our work helpful, please consider citing us:</p>
-    <pre><code>@article{qiao2026structured,
-  title={Structured {3D} Latents Are Surprisingly Powerful: Unleashing Generalizable Style with {2D} Diffusion},
-  author={Qiao, Yiran and Lu, Yiren and Zhou, Yunlai and Liu, Disheng and Hou, Linlin and Yang, Rui and Yin, Yu and Ma, Jing},
-  journal={arXiv preprint arXiv:2605.04412},
+    <pre><code>@article{qiao2026advsplat,
+  title={{AdvSplat}: Adversarial Attacks on Feed-Forward Gaussian Splatting Models},
+  author={Qiao, Yiran and Lu, Yiren and Zhou, Yunlai and Yang, Rui and Hou, Linlin and Yin, Yu and Ma, Jing},
+  journal={arXiv preprint arXiv:2603.23686},
   year={2026}
 }
 </code></pre>
