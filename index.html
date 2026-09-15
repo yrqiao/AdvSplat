@@ -552,6 +552,217 @@
   </div>
 </section>
 <!-- End results -->
+<!-- Different attack strength: three perturbation budgets per variant -->
+<section class="section hero">
+  <div class="container is-max-widescreen">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Different Attack Strength</h2>
+      </div>
+      <div class="str-scroll">
+        <div class="str-grid">
+          <!-- Which dataset each column group is; two empty cells for the label gutters -->
+          <div></div>
+          <div></div>
+          <div class="res-dataset">RE10K</div>
+          <div class="res-dataset">DL3DV</div>
+
+          <!-- Ref. / Novel Views, once per group -->
+          <div></div>
+          <div></div>
+          <div class="grid-head">Ref.</div>
+          <div class="grid-head is-views">Novel Views</div>
+          <div class="grid-head">Ref.</div>
+          <div class="grid-head is-views">Novel Views</div>
+
+          <div class="row-label spans-group"><span>Gradient-Based</span></div>
+
+          <div class="row-label"><span>2/255</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/re10k/gb_2_ref0.jpg" alt="RE10K reference view 1, perturbed by our gradient-based attack at epsilon 2/255"/>
+            <img src="./static/images/strength/re10k/gb_2_ref1.jpg" alt="RE10K reference view 2, perturbed by our gradient-based attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gb_2_nv0.jpg" alt="RE10K novel view 1 rendered after our gradient-based attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gb_2_nv1.jpg" alt="RE10K novel view 2 rendered after our gradient-based attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gb_2_nv2.jpg" alt="RE10K novel view 3 rendered after our gradient-based attack at epsilon 2/255"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/dl3dv/gb_2_ref0.jpg" alt="DL3DV reference view 1, perturbed by our gradient-based attack at epsilon 2/255"/>
+            <img src="./static/images/strength/dl3dv/gb_2_ref1.jpg" alt="DL3DV reference view 2, perturbed by our gradient-based attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gb_2_nv1.jpg" alt="DL3DV novel view 1 rendered after our gradient-based attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gb_2_nv2.jpg" alt="DL3DV novel view 2 rendered after our gradient-based attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gb_2_nv3.jpg" alt="DL3DV novel view 3 rendered after our gradient-based attack at epsilon 2/255"/>
+          </div>
+
+          <div class="row-label"><span>4/255</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/re10k/gb_4_ref0.jpg" alt="RE10K reference view 1, perturbed by our gradient-based attack at epsilon 4/255"/>
+            <img src="./static/images/strength/re10k/gb_4_ref1.jpg" alt="RE10K reference view 2, perturbed by our gradient-based attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gb_4_nv0.jpg" alt="RE10K novel view 1 rendered after our gradient-based attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gb_4_nv1.jpg" alt="RE10K novel view 2 rendered after our gradient-based attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gb_4_nv2.jpg" alt="RE10K novel view 3 rendered after our gradient-based attack at epsilon 4/255"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/dl3dv/gb_4_ref0.jpg" alt="DL3DV reference view 1, perturbed by our gradient-based attack at epsilon 4/255"/>
+            <img src="./static/images/strength/dl3dv/gb_4_ref1.jpg" alt="DL3DV reference view 2, perturbed by our gradient-based attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gb_4_nv1.jpg" alt="DL3DV novel view 1 rendered after our gradient-based attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gb_4_nv2.jpg" alt="DL3DV novel view 2 rendered after our gradient-based attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gb_4_nv3.jpg" alt="DL3DV novel view 3 rendered after our gradient-based attack at epsilon 4/255"/>
+          </div>
+
+          <div class="row-label"><span>8/255</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/re10k/gb_8_ref0.jpg" alt="RE10K reference view 1, perturbed by our gradient-based attack at epsilon 8/255"/>
+            <img src="./static/images/strength/re10k/gb_8_ref1.jpg" alt="RE10K reference view 2, perturbed by our gradient-based attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gb_8_nv0.jpg" alt="RE10K novel view 1 rendered after our gradient-based attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gb_8_nv1.jpg" alt="RE10K novel view 2 rendered after our gradient-based attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gb_8_nv2.jpg" alt="RE10K novel view 3 rendered after our gradient-based attack at epsilon 8/255"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/dl3dv/gb_8_ref0.jpg" alt="DL3DV reference view 1, perturbed by our gradient-based attack at epsilon 8/255"/>
+            <img src="./static/images/strength/dl3dv/gb_8_ref1.jpg" alt="DL3DV reference view 2, perturbed by our gradient-based attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gb_8_nv1.jpg" alt="DL3DV novel view 1 rendered after our gradient-based attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gb_8_nv2.jpg" alt="DL3DV novel view 2 rendered after our gradient-based attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gb_8_nv3.jpg" alt="DL3DV novel view 3 rendered after our gradient-based attack at epsilon 8/255"/>
+          </div>
+
+          <div class="res-gap"></div>
+
+          <div class="row-label spans-group"><span>Gradient-Free</span></div>
+
+          <div class="row-label"><span>2/255</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/re10k/gf_2_ref0.jpg" alt="RE10K reference view 1, perturbed by our gradient-free attack at epsilon 2/255"/>
+            <img src="./static/images/strength/re10k/gf_2_ref1.jpg" alt="RE10K reference view 2, perturbed by our gradient-free attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gf_2_nv0.jpg" alt="RE10K novel view 1 rendered after our gradient-free attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gf_2_nv1.jpg" alt="RE10K novel view 2 rendered after our gradient-free attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gf_2_nv2.jpg" alt="RE10K novel view 3 rendered after our gradient-free attack at epsilon 2/255"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/dl3dv/gf_2_ref0.jpg" alt="DL3DV reference view 1, perturbed by our gradient-free attack at epsilon 2/255"/>
+            <img src="./static/images/strength/dl3dv/gf_2_ref1.jpg" alt="DL3DV reference view 2, perturbed by our gradient-free attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gf_2_nv1.jpg" alt="DL3DV novel view 1 rendered after our gradient-free attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gf_2_nv2.jpg" alt="DL3DV novel view 2 rendered after our gradient-free attack at epsilon 2/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gf_2_nv3.jpg" alt="DL3DV novel view 3 rendered after our gradient-free attack at epsilon 2/255"/>
+          </div>
+
+          <div class="row-label"><span>4/255</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/re10k/gf_4_ref0.jpg" alt="RE10K reference view 1, perturbed by our gradient-free attack at epsilon 4/255"/>
+            <img src="./static/images/strength/re10k/gf_4_ref1.jpg" alt="RE10K reference view 2, perturbed by our gradient-free attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gf_4_nv0.jpg" alt="RE10K novel view 1 rendered after our gradient-free attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gf_4_nv1.jpg" alt="RE10K novel view 2 rendered after our gradient-free attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gf_4_nv2.jpg" alt="RE10K novel view 3 rendered after our gradient-free attack at epsilon 4/255"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/dl3dv/gf_4_ref0.jpg" alt="DL3DV reference view 1, perturbed by our gradient-free attack at epsilon 4/255"/>
+            <img src="./static/images/strength/dl3dv/gf_4_ref1.jpg" alt="DL3DV reference view 2, perturbed by our gradient-free attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gf_4_nv1.jpg" alt="DL3DV novel view 1 rendered after our gradient-free attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gf_4_nv2.jpg" alt="DL3DV novel view 2 rendered after our gradient-free attack at epsilon 4/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gf_4_nv3.jpg" alt="DL3DV novel view 3 rendered after our gradient-free attack at epsilon 4/255"/>
+          </div>
+
+          <div class="row-label"><span>8/255</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/re10k/gf_8_ref0.jpg" alt="RE10K reference view 1, perturbed by our gradient-free attack at epsilon 8/255"/>
+            <img src="./static/images/strength/re10k/gf_8_ref1.jpg" alt="RE10K reference view 2, perturbed by our gradient-free attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gf_8_nv0.jpg" alt="RE10K novel view 1 rendered after our gradient-free attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gf_8_nv1.jpg" alt="RE10K novel view 2 rendered after our gradient-free attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/re10k/gf_8_nv2.jpg" alt="RE10K novel view 3 rendered after our gradient-free attack at epsilon 8/255"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/strength/dl3dv/gf_8_ref0.jpg" alt="DL3DV reference view 1, perturbed by our gradient-free attack at epsilon 8/255"/>
+            <img src="./static/images/strength/dl3dv/gf_8_ref1.jpg" alt="DL3DV reference view 2, perturbed by our gradient-free attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gf_8_nv1.jpg" alt="DL3DV novel view 1 rendered after our gradient-free attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gf_8_nv2.jpg" alt="DL3DV novel view 2 rendered after our gradient-free attack at epsilon 8/255"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/strength/dl3dv/gf_8_nv3.jpg" alt="DL3DV novel view 3 rendered after our gradient-free attack at epsilon 8/255"/>
+          </div>
+        </div>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          Qualitative results as the perturbation budget grows. Rows are grouped by variant, gradient-based
+          above and gradient-free below, and within each group the budget runs <i>&epsilon;</i> = 2/255,
+          4/255, 8/255. The left group is the RE10K scene and the right group the DL3DV scene. Every
+          reference view shown is already perturbed at that budget, and the novel views beside it are
+          rendered from the reconstruction fitted to those views.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End different attack strength -->
 
 <!-- Baseline comparison -->
 <section class="section hero">
