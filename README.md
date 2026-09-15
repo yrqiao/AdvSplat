@@ -1,6 +1,6 @@
-# VALERANT
+# AdvSplat
 
-Project page for **VALERANT**.
+Project page for **AdvSplat**.
 
 Based on the [nerfies](https://github.com/nerfies/nerfies.github.io) project page template
 (CC BY-SA 4.0).
