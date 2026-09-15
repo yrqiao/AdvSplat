@@ -291,6 +291,15 @@ body {
   }
 }
 
+/* Inline colour chips in the pipeline caption. They stand in for the figure's
+   \colorbox swatches, so a phrase like "blue blocks" carries the colour of the
+   blocks it is naming. The colour itself is set per chip, next to the words. */
+.cbox {
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
 /* Results grid: one column per example, one row per stage. */
 .results-grid {
   display: grid;
