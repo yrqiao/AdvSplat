@@ -202,15 +202,31 @@
         <h2 class="title is-3">Motivation</h2>
       </div>
       <div class="item">
-        <img src="./static/images/Figure1.png" alt="Comparison of the previous 3D style transfer pipeline and the DiLAST pipeline. Panel (a) shows the previous pipeline, where a content image and an out-of-distribution style image are fed through frozen flow transformers whose internal query, key and value attention is shared, and the resulting style-transferred 3D asset fails. Panel (b) shows the DiLAST pipeline, where a single content image produces a 3D structure latent that is decoded into a 3D asset in 3DGS format, rendered, and scored by a frozen 2D diffusion teacher whose attention distillation gradient flows back into the latent, succeeding on the same style."/>
+        <img src="./static/images/motivation/pgd_to_feedforward_3dgs.jpg" alt="Two-panel figure. Panel (a), PGD for image classification: a clean photograph of a dog, labelled Dog, gets a random start added to it, and the resulting current image is passed through a frozen model to a loss. A gradient step then ascends that loss surface and the result is projected back into an L2 ball of radius epsilon around the clean image, a loop repeated for T steps, ending in an adversarial image that still looks like the dog but is labelled Cat. A large arrow, headed adapt PGD to feed-forward 3DGS, carries three points down to panel (b): perturb reference views, freeze the reconstruction model, maximise rendering error. Panel (b), effect on novel-view synthesis: two scenes, a white bathroom and a red dining room, each shown as a clean row and an attacked row with two reference views and two novel views. Both clean rows render sharply; in the attacked rows the bathroom comes back almost entirely black and the dining room collapses into a dark smear. A radar map on the right plots clean against attacked over PSNR, LPIPS, DINO, CLIP and SSIM, the attacked polygon sitting well inside the clean one on every axis."/>
       </div>
       <div class="content has-text-justified">
         <p>
-          Comparison of existing 3D style transfer methods and our <b><span style="color:#f03a17">DiLAST</span></b>
-          pipeline. <b>(a)</b> Existing methods rely solely on internal attention of 3D generative models and often
-          fail when handling OOD styles. <b>(b)</b> In contrast, <b><span style="color:#f03a17">DiLAST</span></b>
-          leverages a pretrained 2D diffusion teacher, whose attention distillation gradients guide the denoising
-          trajectory of 3D latents, successfully transferring arbitrary OOD styles.
+          <b>(a)</b> PGD is the standard way to attack an image classifier: from a randomly perturbed start, it
+          repeatedly takes a gradient step that <i>raises</i> the model&rsquo;s loss and projects the result back
+          into an <i>&epsilon;</i>-ball around the clean image, so that after <i>T</i> steps the picture still
+          reads as a dog to us while the model calls it a cat.
+        </p>
+        <p>
+          <b>(b)</b> The same loop carries over to feed-forward 3DGS almost unchanged &mdash; perturb the
+          reference views instead of a single image, keep the reconstruction model frozen, and maximise
+          <b><span style="color:#f03a17">rendering error</span></b> instead of a class score. What comes back is
+          far worse than a flipped label. The perturbed reference views still look like ordinary photographs of
+          the room, yet every novel view rendered from them falls apart: the bathroom returns almost entirely
+          black, and the dining room collapses into a dark smear. The radar map puts the two side by side over
+          PSNR, SSIM, LPIPS, CLIP and DINO, and the attacked scores sit well inside the clean ones on every axis.
+        </p>
+        <p>
+          This probe is <b>white-box</b> &mdash; the gradient step needs the model&rsquo;s own gradients, which a
+          real attacker would rarely have. That it works at all is what motivates
+          <b><span style="color:#f03a17">AdvSplat</span></b>: if feed-forward 3DGS is this fragile when the
+          gradients are handed to you, the question worth asking is how much of the damage survives when they
+          are not &mdash; which is the <b><span style="color:#209cee">black-box</span></b> setting the rest of
+          this work operates in.
         </p>
       </div>
     </div>
