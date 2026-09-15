@@ -212,7 +212,7 @@
           reads as a dog to us while the model calls it a cat.
         </p>
         <p>
-          <b>(b)</b> The same loop carries over to feed-forward 3DGS almost unchanged &mdash; perturb the
+          <b>(b)</b> The same loop carries over to feed-forward 3DGS almost unchanged, perturb the
           reference views instead of a single image, keep the reconstruction model frozen, and maximise
           <b><span style="color:#f03a17">rendering error</span></b> instead of a class score. What comes back is
           far worse than a flipped label. The perturbed reference views still look like ordinary photographs of
@@ -221,11 +221,11 @@
           PSNR, SSIM, LPIPS, CLIP and DINO, and the attacked scores sit well inside the clean ones on every axis.
         </p>
         <p>
-          This probe is <b>white-box</b> &mdash; the gradient step needs the model&rsquo;s own gradients, which a
+          This probe is <b>white-box</b>, the gradient step needs the model&rsquo;s own gradients, which a
           real attacker would rarely have. That it works at all is what motivates
           <b><span style="color:#f03a17">AdvSplat</span></b>: if feed-forward 3DGS is this fragile when the
           gradients are handed to you, the question worth asking is how much of the damage survives when they
-          are not &mdash; which is the <b><span style="color:#209cee">black-box</span></b> setting the rest of
+          are not, which is the <b><span style="color:#209cee">black-box</span></b> setting the rest of
           this work operates in.
         </p>
       </div>
