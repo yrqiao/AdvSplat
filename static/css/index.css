@@ -205,6 +205,80 @@ body {
   text-align: center;
 }
 
+/* Teaser table: the same scene fitted from clean reference views and from
+   perturbed ones. The reference views a row was fitted from run down the Ref.
+   column, the novel views rendered out of that fit sit beside them. Mirrors
+   Figure 1 of the paper. */
+.teaser-grid {
+  display: grid;
+  grid-template-columns: 2.4rem 0.5fr repeat(3, 1fr);
+  /* A wider gap between the rows than within them, so the clean row and the
+     attacked row read as two groups rather than one four-row block. */
+  column-gap: 10px;
+  row-gap: 20px;
+  align-items: center;
+}
+
+/* Headings over the Ref. column and over the novel views. */
+.teaser-head {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.teaser-head.is-views {
+  grid-column: span 3;
+}
+
+/* Clean / Attacked, set bottom-to-top beside each row. */
+.teaser-label {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teaser-label > span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Two reference views stacked into the height of the single novel view beside
+   them, which is why the column is half as wide. Sizing them off the row's own
+   height rather than their width keeps the stack flush with that novel view
+   whatever the grid resolves the columns to; min-height: 0 lets them shrink
+   past their intrinsic height, so the stack never drives the row taller. */
+.teaser-ref {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.teaser-ref > img {
+  display: block;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  /* Five columns will not fit on a phone. Scroll the table sideways rather
+     than shrink every cell into nothing. */
+  .teaser-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .teaser-grid {
+    min-width: 620px;
+  }
+}
+
 /* Results grid: one column per example, one row per stage. */
 .results-grid {
   display: grid;

@@ -109,42 +109,54 @@
 </section>
 <!-- End title, authors and links -->
 
-<!-- Teaser: content image, style image, 3D asset -->
+<!-- Teaser: clean vs. attacked reconstruction of the same scene -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="teaser-row">
-        <div class="teaser-item">
-          <div class="media-1x1">
-            <img src="./static/images/group1/content.png" alt="Content image"/>
+      <div class="teaser-scroll">
+        <div class="teaser-grid">
+          <!-- Heading row: nothing over the labels, then Ref. and the novel views. -->
+          <div></div>
+          <div class="teaser-head">Ref.</div>
+          <div class="teaser-head is-views">Novel Views</div>
+
+          <div class="teaser-label"><span>Clean</span></div>
+          <div class="teaser-ref">
+            <img src="./static/images/teaser/clean_input_0.png" alt="Clean reference photograph of the kitchen, looking at the white cabinets, the stove and the table with a plant on it."/>
+            <img src="./static/images/teaser/clean_input_1.png" alt="Clean reference photograph of the same room from the far corner, looking past the fridge towards the bathroom door."/>
           </div>
-          <p><strong>Content Image</strong></p>
-        </div>
-        <div class="teaser-item">
           <div class="media-1x1">
-            <img src="./static/images/group1/style.jpg" alt="Style image"/>
+            <img src="./static/images/teaser/clean_rendered_0.png" alt="Novel view rendered from the clean reconstruction: the kitchen comes back sharp, with the cabinets, stove and plant all intact."/>
           </div>
-          <p><strong>Style Image</strong></p>
-        </div>
-        <div class="teaser-item">
           <div class="media-1x1">
-            <video autoplay muted loop playsinline>
-              <source src="./static/images/group1/3d_asset.mp4" type="video/mp4">
-            </video>
+            <img src="./static/images/teaser/clean_rendered_1.png" alt="Second novel view rendered from the clean reconstruction, looking past the fridge to the bathroom, clean and sharp."/>
           </div>
-          <p><strong>3D Asset</strong></p>
+          <div class="media-1x1">
+            <img src="./static/images/teaser/clean_rendered_2.png" alt="Third novel view rendered from the clean reconstruction, a slight shift of the same corner, equally sharp."/>
+          </div>
+
+          <div class="teaser-label"><span>Attacked</span></div>
+          <div class="teaser-ref">
+            <img src="./static/images/teaser/adv_input_0.png" alt="The same kitchen reference photograph after the attack, its surfaces covered in a faint mottled colour pattern."/>
+            <img src="./static/images/teaser/adv_input_1.png" alt="The same corner reference photograph after the attack, its white wall and fridge covered in the same mottled colour pattern."/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/teaser/adv_rendered_0.png" alt="Novel view rendered from the attacked reconstruction: the same kitchen, washed out and hazy, with its detail bleached away."/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/teaser/adv_rendered_1.png" alt="Second novel view rendered from the attacked reconstruction, where a pale smear has swallowed the right-hand side of the room."/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/teaser/adv_rendered_2.png" alt="Third novel view rendered from the attacked reconstruction, degraded further until the smear covers most of the frame."/>
+          </div>
         </div>
       </div>
       <h2 class="subtitle has-text-centered">
-        Style-controllable 3D generation breaks down as soon as the target style drifts
-        <b><span style="color:#209cee">out of the generator&rsquo;s training distribution</span></b>. We find the
-        bottleneck is not model capacity &mdash; <b><span style="color:#209cee">structured 3D latents</span></b> are
-        already expressive, merely underused. We therefore introduce
-        <b><span style="color:#f03a17">DiLAST</span></b>: 2D <u>Di</u>ffusion-based <u>L</u>atent <u>A</u>wakening
-        for 3D <u>S</u>tyle <u>T</u>ransfer, which turns a pretrained 2D diffusion model into a teacher: by
-        aligning rendered views with the target style under diffusion guidance, it optimizes the structured 3D
-        latents directly. A content image and an arbitrary style image are enough to produce a stylized 3D asset,
-        and the method is <b><span style="color:#209cee">plug-and-play</span></b> across 3D generation backbones.
+        The same indoor scene, fitted from <b><span style="color:#209cee">clean reference views</span></b> on the
+        top row and from <b><span style="color:#f03a17">perturbed ones</span></b> on the bottom. Clean references
+        reconstruct the room faithfully, and every novel view comes back sharp. The perturbed references still
+        read as that same room &mdash; yet the scene fitted from them collapses, its novel views washing out and
+        smearing until the geometry is gone.
       </h2>
     </div>
   </div>
