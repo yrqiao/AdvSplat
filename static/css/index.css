@@ -219,30 +219,36 @@ body {
   align-items: center;
 }
 
-/* Headings over the Ref. column and over the novel views. */
-.teaser-head {
+/* Headings over a Ref. column and over a group of novel views. */
+.grid-head {
   text-align: center;
   font-weight: 700;
+}
+
+.teaser-grid .grid-head {
   font-size: 1.2rem;
 }
 
-.teaser-head.is-views {
+.grid-head.is-views {
   grid-column: span 3;
 }
 
-/* Clean / Attacked, set bottom-to-top beside each row. */
-.teaser-label {
+/* The row name, set bottom-to-top beside its row. */
+.row-label {
   align-self: stretch;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.teaser-label > span {
+.row-label > span {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   white-space: nowrap;
   font-weight: 700;
+}
+
+.teaser-grid .row-label > span {
   font-size: 1.2rem;
 }
 
@@ -256,25 +262,25 @@ body {
    they would instead each take their square intrinsic height, making the stack
    exactly one gap taller than the novel views and hanging half a gap over each
    end. Half the gap comes off each view so the two still clear each other. */
-.teaser-ref {
+.ref-stack {
   position: relative;
   align-self: stretch;
 }
 
-.teaser-ref > img {
+.ref-stack > img {
   display: block;
   position: absolute;
   left: 0;
   width: 100%;
-  height: calc(50% - 5px);
+  height: calc(50% - var(--stack-gap, 10px) / 2);
   object-fit: cover;
 }
 
-.teaser-ref > img:first-child {
+.ref-stack > img:first-child {
   top: 0;
 }
 
-.teaser-ref > img:last-child {
+.ref-stack > img:last-child {
   bottom: 0;
 }
 
@@ -298,6 +304,56 @@ body {
   padding: 0.05em 0.3em;
   border-radius: 3px;
   white-space: nowrap;
+}
+
+/* Qualitative results table: nine rows, one per method and attack variant, and
+   two column groups, one per dataset. Each group repeats the teaser's shape, a
+   half-width Ref. column of stacked reference views against the novel views
+   rendered from them, so the same .ref-stack and .media-1x1 cells carry over.
+   Mirrors Figure 5 of the paper. */
+.res-grid {
+  --stack-gap: 4px;
+  display: grid;
+  grid-template-columns: 2.2rem 0.5fr repeat(3, 1fr) 0.5fr repeat(3, 1fr);
+  gap: 4px;
+  align-items: center;
+}
+
+/* Nine rows of long names ("DP+Ours (GB)") in a 2.2rem gutter, so these are set
+   a good deal smaller than the teaser's two. */
+.res-grid .row-label > span {
+  font-size: 0.72rem;
+}
+
+.res-grid .grid-head {
+  font-size: 0.9rem;
+}
+
+/* Which dataset a column group belongs to, over the Ref. / Novel Views row. */
+.res-dataset {
+  grid-column: span 4;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+/* Breathing room between the three method groups, as in the paper figure. */
+.res-gap {
+  grid-column: 1 / -1;
+  height: 7px;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Nine columns will not fit on a narrow screen; scroll the table sideways
+     rather than shrink every cell into nothing. */
+  .res-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .res-grid {
+    min-width: 900px;
+  }
 }
 
 /* Results grid: one column per example, one row per stage. */

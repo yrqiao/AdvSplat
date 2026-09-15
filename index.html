@@ -115,11 +115,11 @@
         <div class="teaser-grid">
           <!-- Heading row: nothing over the labels, then Ref. and the novel views. -->
           <div></div>
-          <div class="teaser-head">Ref.</div>
-          <div class="teaser-head is-views">Novel Views</div>
+          <div class="grid-head">Ref.</div>
+          <div class="grid-head is-views">Novel Views</div>
 
-          <div class="teaser-label"><span>Clean</span></div>
-          <div class="teaser-ref">
+          <div class="row-label"><span>Clean</span></div>
+          <div class="ref-stack">
             <img src="./static/images/teaser/clean_input_0.png" alt="Clean reference photograph of the kitchen, looking at the white cabinets, the stove and the table with a plant on it."/>
             <img src="./static/images/teaser/clean_input_1.png" alt="Clean reference photograph of the same room from the far corner, looking past the fridge towards the bathroom door."/>
           </div>
@@ -133,8 +133,8 @@
             <img src="./static/images/teaser/clean_rendered_2.png" alt="Third novel view rendered from the clean reconstruction, a slight shift of the same corner, equally sharp."/>
           </div>
 
-          <div class="teaser-label"><span>Attacked</span></div>
-          <div class="teaser-ref">
+          <div class="row-label"><span>Attacked</span></div>
+          <div class="ref-stack">
             <img src="./static/images/teaser/adv_input_0.png" alt="The same kitchen reference photograph after the attack, its surfaces covered in a faint mottled colour pattern."/>
             <img src="./static/images/teaser/adv_input_1.png" alt="The same corner reference photograph after the attack, its white wall and fridge covered in the same mottled colour pattern."/>
           </div>
@@ -262,99 +262,296 @@
 <!-- End pipeline -->
 
 
-<!-- More Results: one column per example -->
+<!-- Results: nine method / variant rows against two datasets -->
 <section class="hero is-light">
   <div class="hero-body">
     <div class="container is-max-widescreen">
       <div class="columns is-centered has-text-centered">
-        <h2 class="title is-3">More Results</h2>
+        <h2 class="title is-3">Results</h2>
+      </div>
+      <div class="res-scroll">
+        <div class="res-grid">
+          <!-- Which dataset each column group is -->
+          <div></div>
+          <div class="res-dataset">RE10K</div>
+          <div class="res-dataset">DL3DV</div>
+
+          <!-- Ref. / Novel Views, once per group -->
+          <div></div>
+          <div class="grid-head">Ref.</div>
+          <div class="grid-head is-views">Novel Views</div>
+          <div class="grid-head">Ref.</div>
+          <div class="grid-head is-views">Novel Views</div>
+
+          <div class="row-label"><span>DP</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/results/re10k/dp_base_ref0.jpg" alt="DepthSplat on RE10K, reference view 1, clean"/>
+            <img src="./static/images/results/re10k/dp_base_ref1.jpg" alt="DepthSplat on RE10K, reference view 2, clean"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/dp_base_nv0.jpg" alt="DepthSplat on RE10K, novel view 1 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/dp_base_nv1.jpg" alt="DepthSplat on RE10K, novel view 2 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/dp_base_nv2.jpg" alt="DepthSplat on RE10K, novel view 3 rendered from clean inputs"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/results/dl3dv/dp_base_ref0.jpg" alt="DepthSplat on DL3DV, reference view 1, clean"/>
+            <img src="./static/images/results/dl3dv/dp_base_ref1.jpg" alt="DepthSplat on DL3DV, reference view 2, clean"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/dp_base_nv1.jpg" alt="DepthSplat on DL3DV, novel view 1 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/dp_base_nv2.jpg" alt="DepthSplat on DL3DV, novel view 2 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/dp_base_nv3.jpg" alt="DepthSplat on DL3DV, novel view 3 rendered from clean inputs"/>
+          </div>
+
+          <div class="row-label"><span>DP+Ours (GB)</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/results/re10k/dp_gb_ref0.jpg" alt="DepthSplat on RE10K, reference view 1, perturbed by our gradient-based attack"/>
+            <img src="./static/images/results/re10k/dp_gb_ref1.jpg" alt="DepthSplat on RE10K, reference view 2, perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/dp_gb_nv0.jpg" alt="DepthSplat on RE10K, novel view 1 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/dp_gb_nv1.jpg" alt="DepthSplat on RE10K, novel view 2 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/dp_gb_nv2.jpg" alt="DepthSplat on RE10K, novel view 3 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/results/dl3dv/dp_gb_ref0.jpg" alt="DepthSplat on DL3DV, reference view 1, perturbed by our gradient-based attack"/>
+            <img src="./static/images/results/dl3dv/dp_gb_ref1.jpg" alt="DepthSplat on DL3DV, reference view 2, perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/dp_gb_nv1.jpg" alt="DepthSplat on DL3DV, novel view 1 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/dp_gb_nv2.jpg" alt="DepthSplat on DL3DV, novel view 2 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/dp_gb_nv3.jpg" alt="DepthSplat on DL3DV, novel view 3 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+
+          <div class="row-label"><span>DP+Ours (GF)</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/results/re10k/dp_gf_ref0.jpg" alt="DepthSplat on RE10K, reference view 1, perturbed by our gradient-free attack"/>
+            <img src="./static/images/results/re10k/dp_gf_ref1.jpg" alt="DepthSplat on RE10K, reference view 2, perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/dp_gf_nv0.jpg" alt="DepthSplat on RE10K, novel view 1 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/dp_gf_nv1.jpg" alt="DepthSplat on RE10K, novel view 2 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/dp_gf_nv2.jpg" alt="DepthSplat on RE10K, novel view 3 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/results/dl3dv/dp_gf_ref0.jpg" alt="DepthSplat on DL3DV, reference view 1, perturbed by our gradient-free attack"/>
+            <img src="./static/images/results/dl3dv/dp_gf_ref1.jpg" alt="DepthSplat on DL3DV, reference view 2, perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/dp_gf_nv1.jpg" alt="DepthSplat on DL3DV, novel view 1 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/dp_gf_nv2.jpg" alt="DepthSplat on DL3DV, novel view 2 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/dp_gf_nv3.jpg" alt="DepthSplat on DL3DV, novel view 3 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+
+          <div class="res-gap"></div>
+
+          <div class="row-label"><span>NP</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/results/re10k/np_base_ref0.jpg" alt="NoPoSplat on RE10K, reference view 1, clean"/>
+            <img src="./static/images/results/re10k/np_base_ref1.jpg" alt="NoPoSplat on RE10K, reference view 2, clean"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/np_base_nv0.jpg" alt="NoPoSplat on RE10K, novel view 1 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/np_base_nv1.jpg" alt="NoPoSplat on RE10K, novel view 2 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/np_base_nv2.jpg" alt="NoPoSplat on RE10K, novel view 3 rendered from clean inputs"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/results/dl3dv/np_base_ref0.jpg" alt="NoPoSplat on DL3DV, reference view 1, clean"/>
+            <img src="./static/images/results/dl3dv/np_base_ref1.jpg" alt="NoPoSplat on DL3DV, reference view 2, clean"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/np_base_nv1.jpg" alt="NoPoSplat on DL3DV, novel view 1 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/np_base_nv2.jpg" alt="NoPoSplat on DL3DV, novel view 2 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/np_base_nv3.jpg" alt="NoPoSplat on DL3DV, novel view 3 rendered from clean inputs"/>
+          </div>
+
+          <div class="row-label"><span>NP+Ours (GB)</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/results/re10k/np_gb_ref0.jpg" alt="NoPoSplat on RE10K, reference view 1, perturbed by our gradient-based attack"/>
+            <img src="./static/images/results/re10k/np_gb_ref1.jpg" alt="NoPoSplat on RE10K, reference view 2, perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/np_gb_nv0.jpg" alt="NoPoSplat on RE10K, novel view 1 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/np_gb_nv1.jpg" alt="NoPoSplat on RE10K, novel view 2 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/np_gb_nv2.jpg" alt="NoPoSplat on RE10K, novel view 3 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/results/dl3dv/np_gb_ref0.jpg" alt="NoPoSplat on DL3DV, reference view 1, perturbed by our gradient-based attack"/>
+            <img src="./static/images/results/dl3dv/np_gb_ref1.jpg" alt="NoPoSplat on DL3DV, reference view 2, perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/np_gb_nv1.jpg" alt="NoPoSplat on DL3DV, novel view 1 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/np_gb_nv2.jpg" alt="NoPoSplat on DL3DV, novel view 2 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/np_gb_nv3.jpg" alt="NoPoSplat on DL3DV, novel view 3 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+
+          <div class="row-label"><span>NP+Ours (GF)</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/results/re10k/np_gf_ref0.jpg" alt="NoPoSplat on RE10K, reference view 1, perturbed by our gradient-free attack"/>
+            <img src="./static/images/results/re10k/np_gf_ref1.jpg" alt="NoPoSplat on RE10K, reference view 2, perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/np_gf_nv0.jpg" alt="NoPoSplat on RE10K, novel view 1 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/np_gf_nv1.jpg" alt="NoPoSplat on RE10K, novel view 2 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/np_gf_nv2.jpg" alt="NoPoSplat on RE10K, novel view 3 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/results/dl3dv/np_gf_ref0.jpg" alt="NoPoSplat on DL3DV, reference view 1, perturbed by our gradient-free attack"/>
+            <img src="./static/images/results/dl3dv/np_gf_ref1.jpg" alt="NoPoSplat on DL3DV, reference view 2, perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/np_gf_nv1.jpg" alt="NoPoSplat on DL3DV, novel view 1 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/np_gf_nv2.jpg" alt="NoPoSplat on DL3DV, novel view 2 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/np_gf_nv3.jpg" alt="NoPoSplat on DL3DV, novel view 3 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+
+          <div class="res-gap"></div>
+
+          <div class="row-label"><span>AP</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/results/re10k/ap_base_ref0.jpg" alt="AnySplat on RE10K, reference view 1, clean"/>
+            <img src="./static/images/results/re10k/ap_base_ref1.jpg" alt="AnySplat on RE10K, reference view 2, clean"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/ap_base_nv0.jpg" alt="AnySplat on RE10K, novel view 1 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/ap_base_nv1.jpg" alt="AnySplat on RE10K, novel view 2 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/ap_base_nv2.jpg" alt="AnySplat on RE10K, novel view 3 rendered from clean inputs"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/results/dl3dv/ap_base_ref0.jpg" alt="AnySplat on DL3DV, reference view 1, clean"/>
+            <img src="./static/images/results/dl3dv/ap_base_ref1.jpg" alt="AnySplat on DL3DV, reference view 2, clean"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/ap_base_nv1.jpg" alt="AnySplat on DL3DV, novel view 1 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/ap_base_nv2.jpg" alt="AnySplat on DL3DV, novel view 2 rendered from clean inputs"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/ap_base_nv3.jpg" alt="AnySplat on DL3DV, novel view 3 rendered from clean inputs"/>
+          </div>
+
+          <div class="row-label"><span>AP+Ours (GB)</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/results/re10k/ap_gb_ref0.jpg" alt="AnySplat on RE10K, reference view 1, perturbed by our gradient-based attack"/>
+            <img src="./static/images/results/re10k/ap_gb_ref1.jpg" alt="AnySplat on RE10K, reference view 2, perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/ap_gb_nv0.jpg" alt="AnySplat on RE10K, novel view 1 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/ap_gb_nv1.jpg" alt="AnySplat on RE10K, novel view 2 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/ap_gb_nv2.jpg" alt="AnySplat on RE10K, novel view 3 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/results/dl3dv/ap_gb_ref0.jpg" alt="AnySplat on DL3DV, reference view 1, perturbed by our gradient-based attack"/>
+            <img src="./static/images/results/dl3dv/ap_gb_ref1.jpg" alt="AnySplat on DL3DV, reference view 2, perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/ap_gb_nv1.jpg" alt="AnySplat on DL3DV, novel view 1 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/ap_gb_nv2.jpg" alt="AnySplat on DL3DV, novel view 2 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/ap_gb_nv3.jpg" alt="AnySplat on DL3DV, novel view 3 rendered from inputs perturbed by our gradient-based attack"/>
+          </div>
+
+          <div class="row-label"><span>AP+Ours (GF)</span></div>
+          <div class="ref-stack">
+            <img src="./static/images/results/re10k/ap_gf_ref0.jpg" alt="AnySplat on RE10K, reference view 1, perturbed by our gradient-free attack"/>
+            <img src="./static/images/results/re10k/ap_gf_ref1.jpg" alt="AnySplat on RE10K, reference view 2, perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/ap_gf_nv0.jpg" alt="AnySplat on RE10K, novel view 1 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/ap_gf_nv1.jpg" alt="AnySplat on RE10K, novel view 2 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/re10k/ap_gf_nv2.jpg" alt="AnySplat on RE10K, novel view 3 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="ref-stack">
+            <img src="./static/images/results/dl3dv/ap_gf_ref0.jpg" alt="AnySplat on DL3DV, reference view 1, perturbed by our gradient-free attack"/>
+            <img src="./static/images/results/dl3dv/ap_gf_ref1.jpg" alt="AnySplat on DL3DV, reference view 2, perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/ap_gf_nv1.jpg" alt="AnySplat on DL3DV, novel view 1 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/ap_gf_nv2.jpg" alt="AnySplat on DL3DV, novel view 2 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+          <div class="media-1x1">
+            <img src="./static/images/results/dl3dv/ap_gf_nv3.jpg" alt="AnySplat on DL3DV, novel view 3 rendered from inputs perturbed by our gradient-free attack"/>
+          </div>
+        </div>
       </div>
       <div class="content has-text-justified">
         <p>
-          Each column is one example. From the <b>content image</b> in the first row and the
-          <b>style image</b> in the second, <b><span style="color:#f03a17">DiLAST</span></b> produces the
-          <b>stylized 3D asset</b> shown in the third row.
+          Qualitative results on RE10K and DL3DV (<i>&epsilon;</i> = 8/255). DP denotes DepthSplat, NP denotes
+          NoPoSplat, and AP denotes AnySplat. GB denotes the gradient-based variant, and GF denotes the
+          gradient-free variant. All baselines use clean inputs, whereas our method uses the optimized
+          adversarial examples as inputs.
         </p>
-      </div>
-      <div class="results-grid-scroll">
-        <div class="results-grid">
-          <div class="results-grid-label">Content</div>
-          <div class="media-1x1">
-            <img src="./static/images/group2/content.png" alt="Content image for example 1"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group3/content.png" alt="Content image for example 2"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group4/content.png" alt="Content image for example 3"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group5/content.png" alt="Content image for example 4"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group6/content.png" alt="Content image for example 5"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group7/content.png" alt="Content image for example 6"/>
-          </div>
-
-          <div class="results-grid-label">Style</div>
-          <div class="media-1x1">
-            <img src="./static/images/group2/style.jpg" alt="Style image for example 1"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group3/style.jpg" alt="Style image for example 2"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group4/style.jpg" alt="Style image for example 3"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group5/style.jpg" alt="Style image for example 4"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group6/style.jpg" alt="Style image for example 5"/>
-          </div>
-          <div class="media-1x1">
-            <img src="./static/images/group7/style.jpg" alt="Style image for example 6"/>
-          </div>
-
-          <div class="results-grid-label">Video</div>
-          <div class="media-1x1">
-            <video autoplay muted loop playsinline>
-              <source src="./static/images/group2/video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="media-1x1">
-            <video autoplay muted loop playsinline>
-              <source src="./static/images/group3/video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="media-1x1">
-            <video autoplay muted loop playsinline>
-              <source src="./static/images/group4/video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="media-1x1">
-            <video autoplay muted loop playsinline>
-              <source src="./static/images/group5/video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="media-1x1">
-            <video autoplay muted loop playsinline>
-              <source src="./static/images/group6/video.mp4" type="video/mp4">
-            </video>
-          </div>
-          <div class="media-1x1">
-            <video autoplay muted loop playsinline>
-              <source src="./static/images/group7/video.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End more results -->
+<!-- End results -->
 
 <!-- Baseline comparison -->
 <section class="section hero">
